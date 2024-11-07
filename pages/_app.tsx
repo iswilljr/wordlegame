@@ -5,7 +5,6 @@ import { Analytics } from "@vercel/analytics/react";
 import { Provider } from "react-redux";
 import { getCookie } from "cookies-next";
 import { store } from "store/store";
-import { Footer } from "components/Footer";
 import { setNumberOfAttempts, setNumberOfLetters } from "store/appSlice";
 import { MontserratFont, OpenSansFont } from "utils/fonts";
 import {
@@ -48,7 +47,6 @@ export default function App({
       <Provider store={store}>
         <div className={`App ${MontserratFont.variable} ${OpenSansFont.variable}`}>
           <Component {...pageProps} colorScheme={colorScheme} />
-          <Footer />
         </div>
       </Provider>
       <Analytics />
